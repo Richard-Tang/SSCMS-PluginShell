@@ -1,3 +1,5 @@
+[TOC]
+
 # Vul Function Point
 
 Plug-in offline installation function, Rebound Shell is realized by making malicious plug-ins.
